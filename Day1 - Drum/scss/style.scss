@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	background-color: #85ffbd;
+	animation: rotate 1s linear alternate infinite;
+	overflow: hidden;
+}
+@keyframes rotate {
+	50% {
+		background: linear-gradient(225deg, #85ffbd 0%, #fffb7d 100%);
+	}
+	0%,
+	100% {
+		background: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+	}
+}
+section {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	button {
+		cursor: pointer;
+		display: block;
+		border: none;
+		outline: none;
+		border-radius: 1rem;
+		padding: 2rem;
+		font-size: 1.5em;
+		color: #fff;
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+		&.active,
+		&:active {
+			transform: scale(1.2);
+		}
+	}
+	button:nth-child(-n + 4) {
+		background: #85ffbd;
+		box-shadow: 20px 20px 60px #71d9a1, -20px -20px 60px #99ffd9;
+	}
+	button:nth-child(n + 6) {
+		background: #fffb7d;
+		box-shadow: 14px 14px 28px #d9d56a, -14px -14px 28px #ffff90;
+	}
+	button:nth-child(5) {
+		background: rgb(133, 255, 189);
+		background: linear-gradient(
+			90deg,
+			rgba(133, 255, 189, 1) 0%,
+			rgba(255, 255, 144, 1) 57%
+		);
+		box-shadow: 20px 20px 60px #71d9a1, -20px -20px 60px #99ffd9;
+	}
+}
