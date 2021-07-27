@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@mixin fcenter($direction: row, $gap: 0) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
+	gap: $gap;
+}
+
+:root {
+	--borer-color: #fff;
+	--box-border: 10px;
+	--box-filter: 0px;
+}
+
+body {
+	font-family: mak, 'Poppins', sans-serif;
+	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+}
+section {
+	padding: 2rem;
+	height: 100%;
+	width: 100%;
+	@include fcenter(column, 2rem);
+	h1 {
+		font-size: 2em;
+		color: #fff;
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	}
+	.parameter {
+		@include fcenter($gap: 5rem);
+		.params {
+			@include fcenter(column, 0.5rem);
+		}
+	}
+}
+
+.viewarea {
+	height: 650px;
+	width: 920px;
+	margin-top: 2rem;
+	box-shadow: -20px -20px 60px #b0b8be, 20px 20px 60px #eefaff;
+	@include fcenter();
+	overflow: hidden;
+	.changingport {
+		filter: blur(var(--box-filter));
+
+		border: var(--box-border) solid var(--borer-color);
+		img {
+			height: 450px;
+			width: 720px;
+		}
+	}
+}
+
+.css__code {
+	margin-top: 2rem;
+	width: 50vw;
+	height: 25vh;
+	background: #151718;
+	border-radius: 1rem;
+	margin-bottom: 3rem;
+	display: grid;
+	grid-template-rows: 10% 90%;
+	color: white;
+	padding: 0.8rem 1rem;
+	.top {
+		display: flex;
+		gap: 0.4em;
+		.circle {
+			background: #fff;
+			height: 10px;
+			width: 10px;
+			border-radius: 50%;
+			&.red {
+				background: red;
+			}
+			&.yellow {
+				background: yellow;
+			}
+			&.green {
+				background: rgb(0, 255, 0);
+			}
+		}
+	}
+	.down {
+		font-family: 'Poppins', sans-serif;
+		align-self: center;
+		span {
+			color: rgb(0, 182, 0);
+		}
+	}
+}

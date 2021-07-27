@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Editor</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<section>
+			<h1>Box Border Generator</h1>
+			<div class="parameter">
+				<div class="params spacing">
+					<label for="space">Spacing</label>
+					<input type="range" id="space" min="0" max="100" value="10" />
+				</div>
+				<div class="params bluring">
+					<label for="blur">Bluring</label>
+					<input type="range" id="blur" min="0" max="25" value="0" />
+				</div>
+				<div class="params coloring">
+					<label for="color">Coloring</label>
+
+					<input type="color" id="color" value="#ffffff" />
+				</div>
+			</div>
+
+			<div class="viewarea">
+				<div class="changingport">
+					<img src="./assets/bg.png" alt="" />
+				</div>
+			</div>
+
+			<div class="css__code">
+				<div class="top">
+					<div class="circle red"></div>
+					<div class="circle yellow"></div>
+					<div class="circle green"></div>
+				</div>
+				<div class="down">
+					<p>blur : <span class="blur-text">0px</span>;</p>
+					<p>border-width : <span class="border-rad-text">10px</span>;</p>
+					<p>border-color : <span class="border-col-text">#fff</span>;</p>
+				</div>
+			</div>
+		</section>
+		<script src="./script.js"></script>
+	</body>
+</html>
